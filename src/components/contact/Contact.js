@@ -14,7 +14,7 @@ const Contact = () => {
                     </div>
                     <div className="mail-div">
                         <div className='copy-text-div'>
-                            <p className='mail-text'>abhisheksharmayt@gmail.com</p>
+                            <p className='mail-text'>abhisheksharmayt2@gmail.com</p>
                         </div>
                             <div className="copy-icon-div" onClick={()=>{
                                 navigator.clipboard.writeText('abhisheksharmayt2@gmail.com')

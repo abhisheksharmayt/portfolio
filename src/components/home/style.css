@@ -90,6 +90,12 @@
 }
 
 @media(max-width: 800px){
+    .intro{
+        font-size: 2em;
+    }
+    .info{
+        font-size: 0.9em;
+    }
     .icon-title{
         font-size: 0.9em;
     }

@@ -20,7 +20,7 @@
     color: var(--darkLightShade);
     width: 95%;
     max-width: 30rem;
-    margin: 3rem;
+    margin-top: 1rem;
 }
 
 .copy-text-div {
@@ -60,4 +60,9 @@
 .copy-icon-link {
     height: 40%;
     width: 40%;
+}
+@media (max-width: 450px){
+    .mail-text{
+        font-size: 13px;
+    }
 }

@@ -7,6 +7,8 @@ import Projects from './components/projects/Project'
 import About from './components/about/About'
 import Contact from './components/contact/Contact'
 import Error from './components/Error'
+import Videos from './components/videos/Videos'
+import Work from './components/videos/Work';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -17,7 +19,9 @@ root.render(
         <Route path='/' element={<Home />} />
         <Route path='/projects' element={<Projects />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/videos/:id' element={<Work/>}/>
         <Route path='/about' element={<About />} />
+        <Route path='/videos' element={<Videos/>} />
         <Route path='*' element={<Error />} />
       </Routes>
     </Router>
