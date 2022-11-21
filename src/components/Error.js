@@ -4,7 +4,7 @@ import Navbar from './navbar/Navbar'
 const Error = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <main>
         <h1>Page Not Found</h1>
       </main>

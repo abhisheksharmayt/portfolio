@@ -29,7 +29,6 @@ a.social-link {
     -webkit-tap-highlight-color: transparent;
     color: rgb(255, 255, 255);
     cursor: pointer;
-    background-color: white;
     padding: 10px;
     border-radius: 100px;
     transition: all 0.3s ease 0s;
@@ -43,6 +42,7 @@ a.social-link:visited {
 
 a.social-link:hover {
     box-shadow: 0 5px 15px rgb(0 0 0 / 10%);
+    /* background-color: white; */
     transform: rotate(-15deg);
 }
 

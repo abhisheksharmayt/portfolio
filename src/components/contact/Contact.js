@@ -6,7 +6,7 @@ import './style.css'
 const Contact = () => {
     return (
         <>
-            <Navbar />
+            {/* <Navbar /> */}
             <main>
                 <section className="contact-section">
                     <div className='title'>
@@ -24,7 +24,7 @@ const Contact = () => {
                     </div>
                 </section>
             </main>
-            <Social />
+            {/* <Social /> */}
         </>
     )
 }

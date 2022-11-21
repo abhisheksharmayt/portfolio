@@ -4,13 +4,14 @@ import Social from '../social/social'
 import './style.css';
 import logo from './fast-forward.png'
 import { data } from './data'
+import Terminal from '../terminal/Terminal';
 
 const Project = () => {
   const [index, setIndex] = useState(0);
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <main>
         <section className='project-section'>
           <div className='title'>
@@ -71,7 +72,8 @@ const Project = () => {
           </div>
         </section>
       </main>
-      <Social />
+      {/* <Social /> */}
+      {/* <Terminal/> */}
     </>
   )
 }

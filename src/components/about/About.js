@@ -8,7 +8,7 @@ import { education } from './data'
 const About = () => {
     return (
         <>
-            <Navbar />
+            {/* <Navbar /> */}
                 <main>
                     <section className='about-section'>
                         <div className='skills-section'>
@@ -52,7 +52,7 @@ const About = () => {
                         </div>
                     </section>
                 </main>
-            <Social />
+            {/* <Social /> */}
         </>
     )
 }

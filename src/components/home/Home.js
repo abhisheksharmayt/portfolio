@@ -4,10 +4,11 @@ import Social from '../social/social'
 import profile from '../../images/profile-picture.jpeg'
 import './style.css'
 import { skills } from './data'
+import Terminal from '../terminal/Terminal'
 const Home = () => {
     return (
         <>
-            <Navbar />
+            {/* <Navbar /> */}
             <main>
                 <section className='intro-section'>
                     <div className='profile-img-container'>
@@ -30,7 +31,8 @@ const Home = () => {
                     </div>
                 </section>
             </main>
-            <Social />
+            {/* <Social /> */}
+            {/* <Terminal/> */}
         </>
     )
 }
