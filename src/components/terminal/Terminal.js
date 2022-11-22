@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import './style.css'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { routes } from './routes-data'
@@ -20,6 +20,10 @@ const Terminal = () => {
         }
         else navigate(values[1]);
     }
+
+    useEffect(()=>{
+        inputRef.current.focus();
+    },[])
     return (
         <div className='terminal-div'>
             <div className='current-directory'>
