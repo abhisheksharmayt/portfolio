@@ -48,7 +48,7 @@ a.social-link:hover {
 
 @media(max-height: 500px) {
     .social-icon-line {
-        height: 40px;
+        height: 0px;
     }
 }
 

@@ -50,4 +50,9 @@ export const social = [
         url: 'https://www.leetcode.com/abhisheksharmayt',
         icon: <SiLeetcode/>,
     },
+    {
+        id: 5,
+        url: 'https://www.twitter.com/abhishheksharma',
+        icon: <FaTwitter/>,
+    },
 ];
