@@ -30,7 +30,7 @@ const Navbar = () => {
             links.map((curr) => {
               const { id, url, text } = curr;
               return (
-                <li key={id} className='nav-link'>
+                <li key={id} className='nav-link' onClick={()=>setShowLinks(false)}>
                   {
                     <NavLink to={url} className="navLink">{text}</NavLink>
                   }

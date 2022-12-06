@@ -57,7 +57,8 @@ a.social-link:hover {
         display: none;
     }
     .social-div{
-        position: relative;
+        position: unset;
+        z-index: 0;
         left: 0;
         flex-direction: row;
         width: 100%;
