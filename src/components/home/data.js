@@ -1,4 +1,4 @@
-import {html, css, javascript, reactjs, bootstrap, cpp, git, github, nodejs, expressjs, mongodb} from '../../svg-icons/svg'
+import {html, css, javascript, reactjs, bootstrap, cpp, git, github, nodejs, expressjs, mongodb, tailwindCss} from '../../svg-icons/svg'
 export const skills = [
     {
         id: 1,
@@ -54,5 +54,10 @@ export const skills = [
         id: 10,
         name: 'Git',
         svg: git
+    },
+    {
+        id: 11,
+        name: 'Tailwind CSS',
+        svg: tailwindCss
     }
 ]
