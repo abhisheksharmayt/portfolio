@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom'
 import './index.css';
 import Home from './components/home/Home'
-import Projects from './components/projects/Project'
+import Projects from './components/projects/Projects';
 import About from './components/about/About'
 import Contact from './components/contact/Contact'
 import Error from './components/Error'

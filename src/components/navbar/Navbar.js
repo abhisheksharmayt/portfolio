@@ -38,7 +38,7 @@ const Navbar = () => {
               )
             })
           }
-          <li className='nav-link'><a className='navLink' href="https://drive.google.com/file/d/1NCNuoF5E88HmdsI4IbNGldunUsT-hqXq/view?usp=share_link">Resume</a></li>
+          <li className='nav-link'><a className='navLink' target='_blank' href="https://drive.google.com/file/d/1NCNuoF5E88HmdsI4IbNGldunUsT-hqXq/view?usp=share_link">Resume</a></li>
         </ul>
       </div>
       <div className="dark-mode"></div>

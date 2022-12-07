@@ -15,7 +15,7 @@ const Home = () => {
                         <img src={profile} alt="profile picture" className='profile-pic' />
                     </div>
                     <h1 className='intro'>Hi, I am <span className='name'>Abhishek Sharma</span></h1>
-                    <h4 className='info'>Frontend web developer with a passion for asthetic interfaces</h4>
+                    <h4 className='info'>Frontend web developer with a passion for aesthetic interfaces</h4>
                     <div className="skills-div">
                         {
                             skills.map((icon) => {
