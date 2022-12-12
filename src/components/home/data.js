@@ -65,7 +65,7 @@ export const skills = [
 export const messages = [
     'Click Me, for a secret🤫...',
     'Keep Going...',
-    'Yeah! your doing great...',
+    "Yeah! you're doing great...",
     'One more time...',
     'This one is last...',
     'Press "⌘ + /" or "Ctrl + /"',
