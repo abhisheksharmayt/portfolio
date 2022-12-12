@@ -10,7 +10,7 @@ const Home = () => {
     const [showPopup, setShowPopup] = useState(false);
     const [index, setIndex] = useState(0);
     const handleImgClick = ()=>{
-        if(index<6) setIndex(index+1);
+        if(index<5) setIndex(index+1);
     }
     return (
         <>
