@@ -21,7 +21,34 @@
     padding-top: 1em;
     /* transition: all 0.3s; */
 }
-
+.profile-img-container{
+    position: relative;
+    transition: 0.3s all ease;
+}
+.profile-img-container:hover{
+    transform: rotate(-5deg);
+}
+.img-popup{
+    position: absolute;
+    top: 60px;
+    left: 170px;
+    width: max-content;
+    background-color: white;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 10%);
+    padding: 0px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+.img-popup::before{
+    width: 10px;
+    height: 10px;
+    background-color: red;
+}
+/* .img-popup::after{
+    background-color: red;
+    width: 10px;
+    height: 10px;
+} */
 /* .profile-img-container::after {
     content: "";
     display: block;

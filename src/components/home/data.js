@@ -61,3 +61,13 @@ export const skills = [
         svg: tailwindCss
     }
 ]
+
+export const messages = [
+    'Click Me, for a secret🤫...',
+    'Keep Going...',
+    'Yeah! your doing great...',
+    'One more time...',
+    'This one is last...',
+    'Press "⌘ + /" or "Ctrl + /"',
+    'More coming soon...'
+]

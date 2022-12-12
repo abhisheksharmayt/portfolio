@@ -31,7 +31,7 @@ const Terminal = () => {
             </div>
             <div className="terminal-form-div">
                 <form className='terminal-form' onSubmit={handleSubmit} action="">
-                    <input className="terminal-input" placeholder="command" type="text" ref={inputRef} />
+                    <input className="terminal-input" placeholder="cd help" type="text" ref={inputRef} />
                 </form>
             </div>
         </div>
