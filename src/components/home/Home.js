@@ -18,8 +18,7 @@ const Home = () => {
             <main>
                 <section className='intro-section'>
                     <div className='profile-img-container' onClick={handleImgClick}
-                    onMouseEnter={()=>setShowPopup(true)} >
-                        {/* onMouseLeave={()=>setShowPopup(false)} */}
+                    onMouseEnter={()=>setShowPopup(true)} onMouseLeave={()=>setShowPopup(false)}>
                         <img src={profile} alt="profile picture" className='profile-pic' />
                         {showPopup && 
                         <div className='img-popup'>

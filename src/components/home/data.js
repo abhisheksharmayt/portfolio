@@ -69,5 +69,4 @@ export const messages = [
     'One more time...',
     'This one is last...',
     'Press "⌘ + /" or "Ctrl + /"',
-    'More coming soon...'
 ]
