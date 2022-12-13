@@ -46,7 +46,8 @@ h1 {
     /* overflow: hidden; */
 }
 .project-card:hover{
-    transform: rotate(-3deg);
+    /* transform: rotate(-3deg); */
+    transform: scale(1.03);
 }
 
 .project-card-img-div {
