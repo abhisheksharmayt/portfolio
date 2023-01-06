@@ -4,9 +4,47 @@ import reactMovie from '../../images/projects_thumbnail/reactMovie.png'
 import sorting from '../../images/projects_thumbnail/sorting.png'
 import campusTour from '../../images/projects_thumbnail/campusTour.png'
 import sudoku from '../../images/projects_thumbnail/sudoku.png'
+import techBeats from '../../images/projects_thumbnail/techBeats.png'
 export const projectsData = [
     {
-        id: 1,
+        id: 994,
+        title: "Tech Beats",
+        dates: "Jan 2023",
+        github: "https://github.com/abhisheksharmayt",
+        deployed: "https://techbeats.vercel.app/",
+        img: techBeats,
+        duties: [],
+        tech_stack:[
+            {
+                id: '1a',
+                title: 'HTML',
+                svg: html
+            },
+            {
+                id: '1b',
+                title: 'CSS',
+                svg: css
+            },
+            {
+                id: '1c',
+                title: 'JavaScript',
+                svg: javascript
+            },
+            {
+                id: '1d',
+                title: 'Tailwind CSS',
+                svg: tailwindCss
+            },
+            {
+                id: '1e',
+                title: 'ReactJS',
+                svg: reactjs
+            },
+        ],
+        short: "techBeats"
+    },
+    {
+        id: 995,
         title: "Tesla Ecommerce Clone",
         dates: "Nov 2022",
         github: "https://github.com/abhisheksharmayt/tesla-clone",
@@ -46,7 +84,7 @@ export const projectsData = [
         short: "teslaEcomClone"
     },
     {
-        id: 2,
+        id: 996,
         title: "React Movie",
         dates: "Nov 2022",
         github: "https://github.com/abhisheksharmayt/reactMovie",
@@ -81,7 +119,7 @@ export const projectsData = [
         short: "reactMovie"
     },
     {
-        id: 3,
+        id: 997,
         title: "Campus Tour",
         dates: "Dec 2022",
         github: "https://github.com/abhisheksharmayt/CampusTour",
@@ -130,7 +168,7 @@ export const projectsData = [
         short: "campusTour"
     },
     {
-        id: 4,
+        id: 998,
         title: "Sorting Visualizer",
         dates: "JAN 2022",
         github: "https://github.com/abhisheksharmayt/Sorting-Visualizer",
@@ -160,7 +198,7 @@ export const projectsData = [
         short: "sortingVisualizer"
     },
     {
-        id: 5,
+        id: 999,
         title: "Sudoku Visualizer",
         dates: "JAN 2022",
         github: "https://github.com/abhisheksharmayt/Sudoku-Solver",
