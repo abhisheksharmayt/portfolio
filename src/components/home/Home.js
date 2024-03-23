@@ -28,9 +28,9 @@ const Home = () => {
                     <h1 className='intro'>Hi, I am <span className='name'>Abhishek Sharma</span></h1>
                     <h4 className='info'>Frontend web developer with a passion for aesthetic interfaces</h4>
                     <h2 className='github-title'>My Contributions</h2>
-                    <div className='github-div'>
+                    {/* <div className='github-div'>
                         <img className="github-chart-img" src="https://ghchart.rshah.org/abhisheksharmayt" alt="github chart" />
-                    </div>
+                    </div> */}
                     <div className="skills-div">
                         {
                             skills.map((icon) => {
