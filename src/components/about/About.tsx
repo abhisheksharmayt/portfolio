@@ -1,6 +1,3 @@
-import React from 'react'
-import Navbar from '../navbar/Navbar'
-import Social from '../social/social'
 import { skills } from '../home/data'
 import './style.css'
 import { education } from './data'

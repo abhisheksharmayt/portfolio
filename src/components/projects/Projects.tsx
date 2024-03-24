@@ -1,4 +1,3 @@
-import React from 'react'
 import { projectsData } from './projectsData'
 import './style.css'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
