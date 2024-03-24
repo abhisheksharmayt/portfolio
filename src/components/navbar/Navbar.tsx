@@ -5,47 +5,47 @@ import { NavLink, Outlet } from "react-router-dom";
 import "./style.css";
 import logo from "../../images/logo512.png";
 
+// Define an interface for the links data structure
+interface Link {
+  id: number;
+  url: string;
+  text: string;
+}
+
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
-  const linksDivRef = useRef(null);
-  const linksListRef = useRef(null);
+  const linksDivRef = useRef<HTMLDivElement>(null); // Ref type assertion
+  const linksListRef = useRef<HTMLUListElement>(null); // Ref type assertion
+
   useEffect(() => {
-    if (linksDivRef.current && linksListRef.current) {
+    if (linksListRef.current && linksDivRef.current) {
       const height = linksListRef.current.getBoundingClientRect().height;
-      if (showLinks) {
-        linksDivRef.current.style.height = `${height}px`;
-      } else {
-        linksDivRef.current.style.height = `0px`;
-      }
+      linksDivRef.current.style.height = showLinks ? `${height}px` : `0px`;
     }
   }, [showLinks]);
+
   return (
     <>
       <div className="navbar">
         <div className="logo-bar-div" onClick={() => setShowLinks(!showLinks)}>
-          <a href="/">
+          <NavLink to="/">
             <img src={logo} alt="logo" className="logo" />
-          </a>
+          </NavLink>
           <FaBars className="fabars" />
         </div>
         <div className="links-div" ref={linksDivRef}>
           <ul className="links-list" ref={linksListRef}>
-            {links.map((curr) => {
-              const { id, url, text } = curr;
-              return (
-                <li
-                  key={id}
-                  className="nav-link"
-                  onClick={() => setShowLinks(false)}
-                >
-                  {
-                    <NavLink to={url} className="navLink">
-                      {text}
-                    </NavLink>
-                  }
-                </li>
-              );
-            })}
+            {links.map((curr: Link) => (
+              <li
+                key={curr.id}
+                className="nav-link"
+                onClick={() => setShowLinks(false)}
+              >
+                <NavLink to={curr.url} className="navLink">
+                  {curr.text}
+                </NavLink>
+              </li>
+            ))}
             <li className="nav-link">
               <a
                 className="navLink"
