@@ -1,6 +1,3 @@
-import React from 'react'
-import Navbar from '../navbar/Navbar'
-import Social from '../social/social'
 import { FaRegCopy } from 'react-icons/fa'
 import './style.css'
 const Contact = () => {

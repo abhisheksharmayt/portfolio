@@ -1,10 +1,7 @@
-import React, { useState } from 'react'
-import Navbar from '../navbar/Navbar'
-import Social from '../social/social'
+import { useState } from 'react'
 import profile from '../../images/profile-picture.jpeg'
 import './style.css'
 import { skills } from './data'
-import Terminal from '../terminal/Terminal'
 import { messages } from './data'
 const Home = () => {
     const [showPopup, setShowPopup] = useState(false);

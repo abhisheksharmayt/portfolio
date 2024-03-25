@@ -1,6 +1,3 @@
-import React from 'react'
-import Navbar from './navbar/Navbar'
-
 const Error = () => {
   return (
     <>
@@ -9,7 +6,7 @@ const Error = () => {
         <h1>Page Not Found</h1>
       </main>
     </>
-  )
-}
+  );
+};
 
-export default Error
+export default Error;
