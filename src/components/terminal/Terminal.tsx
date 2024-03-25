@@ -27,7 +27,7 @@ const Terminal: React.FC = () => {
       return;
     }
 
-    navigate(values[1]);
+    navigate(values[1] === "home" ? "/" : values[1]);
   };
 
   useEffect(() => {

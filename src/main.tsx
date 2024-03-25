@@ -15,20 +15,11 @@ import Work from "./components/videos/Work.tsx";
 import About from "./components/about/About.tsx";
 import Videos from "./components/videos/Videos.tsx";
 import Error from "./components/Error.tsx";
-import Navbar from "./components/navbar/Navbar.tsx";
-import Social from "./components/social/social.tsx";
+import App from "./App.tsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route
-      path="/"
-      element={
-        <>
-          <Navbar />
-          <Social />
-        </>
-      }
-    >
+    <Route path="/" element={<App />}>
       <Route index element={<Home />} />
       {/* <Route path="/home" element={<Home />} /> */}
       <Route path="projects" element={<Projects />} />
