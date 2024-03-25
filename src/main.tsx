@@ -38,7 +38,10 @@ const router = createBrowserRouter(
       <Route path="videos" element={<Videos />} />
       <Route path="*" element={<Error />} />
     </Route>
-  )
+  ),
+  {
+    basename: "/",
+  }
 );
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
