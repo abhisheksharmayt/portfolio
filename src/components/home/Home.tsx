@@ -40,7 +40,7 @@ const Home = () => {
         onValue(url, async (snapshot) => {
             setIsLoading(true);
             const data = await snapshot.val();
-            setlastUsersGeoLocation(data[data.length > 1 ? data.length - 1 : 0]);
+            setlastUsersGeoLocation(data[data.length > 1 ? data.length - 2 : 0]);
             setIsLoading(false);
         });
 
