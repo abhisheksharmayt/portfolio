@@ -14,6 +14,7 @@ const Home = () => {
         if (index < 5) setIndex(index + 1);
     }
     const [lastUsersGeoLocation, setlastUsersGeoLocation] = useState<{ city: string; country_name: string }>();
+    const [isLoading, setIsLoading] = useState(true);
 
 
     useEffect(() => {
@@ -36,9 +37,11 @@ const Home = () => {
         getData();
 
         const url = ref(db, "usersGeoLocation")
-        onValue(url, (snapshot) => {
-            const data = snapshot.val();
-            setlastUsersGeoLocation(data[data.length > 1 ? data.length - 1 : 0])
+        onValue(url, async (snapshot) => {
+            setIsLoading(true);
+            const data = await snapshot.val();
+            setlastUsersGeoLocation(data[data.length > 1 ? data.length - 1 : 0]);
+            setIsLoading(false);
         });
 
 
@@ -50,7 +53,7 @@ const Home = () => {
             {/* <Navbar /> */}
             <main>
                 <section className='intro-section'>
-                    <div className="info" style={{ display: "flex", justifyContent: "end", width: "100%", fontSize: "10px" }}> {`Last Seen From: ${lastUsersGeoLocation.city} (${lastUsersGeoLocation.country_name})`} </div>
+                    <div className="info" style={{ display: "flex", justifyContent: "end", width: "100%", fontSize: "10px" }}> {isLoading ? "loading..." : `Last Seen From: ${lastUsersGeoLocation?.city} (${lastUsersGeoLocation?.country_name})`} </div>
                     <div className='profile-img-container' onClick={handleImgClick}
                         onMouseEnter={() => setShowPopup(true)} onMouseLeave={() => setShowPopup(false)}>
                         <img src={profile} alt="profile picture" className='profile-pic' />
