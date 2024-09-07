@@ -22,7 +22,7 @@ function App() {
     // Simulate some initial loading logic, like fetching data
     const initialize = async () => {
       // Put any initialization logic here
-      const app =  await initializeApp(firebaseConfig);
+      await initializeApp(firebaseConfig);
 
       document.addEventListener("keydown", checkKeyValues);
       // await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulate loading
