@@ -13,7 +13,7 @@ const Home = () => {
     const handleImgClick = () => {
         if (index < 5) setIndex(index + 1);
     }
-    const [lastUsersGeoLocation, setlastUsersGeoLocation] = useState("");
+    const [lastUsersGeoLocation, setlastUsersGeoLocation] = useState<{ city: string; country_name: string }>();
 
 
     useEffect(() => {
@@ -24,7 +24,7 @@ const Home = () => {
             const dbRef = ref(getDatabase());
             get(child(dbRef, `usersGeoLocation`)).then((snapshot) => {
                 if (snapshot.exists()) {
-                    set(ref(db, 'usersGeoLocation'), [...snapshot.val().filter(({ ip }) => ip !== res.data.ip), res.data]);
+                    set(ref(db, 'usersGeoLocation'), [...snapshot.val().filter(({ ip }: { ip: number; }) => ip !== res.data.ip), res.data]);
                 } else {
                     console.log("No data available");
                 }
@@ -44,13 +44,13 @@ const Home = () => {
 
 
     }, []);
-    
+
     return (
         <>
             {/* <Navbar /> */}
             <main>
                 <section className='intro-section'>
-                    <div className="info" style={{ display: "flex", justifyContent: "end", width:"100%", fontSize: "10px"}}> {`Last Seen From: ${lastUsersGeoLocation.city} (${lastUsersGeoLocation.country_name})`} </div>
+                    <div className="info" style={{ display: "flex", justifyContent: "end", width: "100%", fontSize: "10px" }}> {`Last Seen From: ${lastUsersGeoLocation.city} (${lastUsersGeoLocation.country_name})`} </div>
                     <div className='profile-img-container' onClick={handleImgClick}
                         onMouseEnter={() => setShowPopup(true)} onMouseLeave={() => setShowPopup(false)}>
                         <img src={profile} alt="profile picture" className='profile-pic' />
