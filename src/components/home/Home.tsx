@@ -1,19 +1,56 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import profile from '../../images/profile-picture.jpeg'
 import './style.css'
 import { skills } from './data'
 import { messages } from './data'
+import axios from "axios";
+import { getDatabase, ref, set, child, get, onValue } from "firebase/database";
+
+
 const Home = () => {
     const [showPopup, setShowPopup] = useState(false);
     const [index, setIndex] = useState(0);
     const handleImgClick = () => {
         if (index < 5) setIndex(index + 1);
     }
+    const [lastUsersGeoLocation, setlastUsersGeoLocation] = useState("");
+
+
+    useEffect(() => {
+        const db = getDatabase();
+        const getData = async () => {
+            const res = await axios.get("https://ipapi.co/json/");
+
+            const dbRef = ref(getDatabase());
+            get(child(dbRef, `usersGeoLocation`)).then((snapshot) => {
+                if (snapshot.exists()) {
+                    set(ref(db, 'usersGeoLocation'), [...snapshot.val().filter(({ ip }) => ip !== res.data.ip), res.data]);
+                } else {
+                    console.log("No data available");
+                }
+            }).catch((error) => {
+                console.error(error);
+            });
+
+        };
+        getData();
+
+        const url = ref(db, "usersGeoLocation")
+        onValue(url, (snapshot) => {
+            const data = snapshot.val();
+            setlastUsersGeoLocation(data[data.length > 1 ? data.length - 1 : 0])
+        });
+
+
+
+    }, []);
+    
     return (
         <>
             {/* <Navbar /> */}
             <main>
                 <section className='intro-section'>
+                    <div className="info" style={{ display: "flex", justifyContent: "end", width:"100%", fontSize: "10px"}}> {`Last Seen From: ${lastUsersGeoLocation.city} (${lastUsersGeoLocation.country_name})`} </div>
                     <div className='profile-img-container' onClick={handleImgClick}
                         onMouseEnter={() => setShowPopup(true)} onMouseLeave={() => setShowPopup(false)}>
                         <img src={profile} alt="profile picture" className='profile-pic' />
